@@ -51,6 +51,7 @@ public class Login extends JFrame{
         cancel_button.setForeground(Color.WHITE);
         add(cancel_button);
 
+        // Change dialog box background color
         getContentPane().setBackground(Color.WHITE);
 
         setLayout(null);
