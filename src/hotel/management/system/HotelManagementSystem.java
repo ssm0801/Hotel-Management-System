@@ -7,13 +7,13 @@ Starting Date   = 22/03/21
 Completion Date =
 ==================================================
 */
-
 package hotel.management.system;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
-public class HotelManagementSystem extends JFrame {
+public class HotelManagementSystem extends JFrame implements ActionListener{
 
     HotelManagementSystem(){
         // size and location of bounding box
@@ -34,16 +34,17 @@ public class HotelManagementSystem extends JFrame {
         heading.setFont(new Font("times new roman", Font.ITALIC, 35));
         main_image_lable.add(heading);
 
-        setLayout(null);
-        setVisible(true);
-
         // Button and its properties (bounds, background color, foreground color, font)
         JButton button = new JButton("CONTINUE");
         button.setBounds(243,300,150,50);
         button.setBackground(Color.BLACK);
         button.setForeground(Color.WHITE);
         button.setFont(new Font("times new roman", Font.BOLD, 20));
+        button.addActionListener(this);
         main_image_lable.add(button);
+
+        setLayout(null);
+        setVisible(true);
 
         // heading blinker function
         while(true){
@@ -60,8 +61,13 @@ public class HotelManagementSystem extends JFrame {
         }
     }
 
+    public void actionPerformed(ActionEvent act_evt){
+        new Login().setVisible(true);
+        this.setVisible(false);
+    }
+
     public static void main(String[] args) {
-        HotelManagementSystem hotel1 = new HotelManagementSystem();
+        HotelManagementSystem hotel = new HotelManagementSystem();
     }
 
 }
