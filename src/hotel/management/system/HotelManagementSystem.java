@@ -27,7 +27,18 @@ public class HotelManagementSystem extends JFrame {
         setLayout(null);
         setVisible(true);
 
+        // heading blinker function
+        while(true){
+            heading.setVisible(false);
 
+            try{ Thread.sleep(300); }
+            catch (Exception e){ }
+
+            heading.setVisible(true);
+
+            try{ Thread.sleep(300); }
+            catch (Exception e){ }
+        }
 
     }
 
