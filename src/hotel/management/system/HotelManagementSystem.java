@@ -17,6 +17,17 @@ public class HotelManagementSystem extends JFrame {
         main_image_lable.setBounds(0,0,640,427);
         add(main_image_lable);
 
+        // heading and its properties
+        JLabel heading = new JLabel("Hotel Management System");
+        heading.setBounds(120,0,400,70);
+        heading.setForeground(Color.BLACK);
+        heading.setFont(new Font("times new roman", Font.ITALIC, 35));
+        main_image_lable.add(heading);
+
+        setLayout(null);
+        setVisible(true);
+
+
 
     }
 
