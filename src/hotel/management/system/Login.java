@@ -51,6 +51,7 @@ public class Login extends JFrame{
         cancel_button.setForeground(Color.WHITE);
         add(cancel_button);
 
+        getContentPane().setBackground(Color.WHITE);
 
         setLayout(null);
         setVisible(true);
