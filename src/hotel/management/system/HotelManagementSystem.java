@@ -1,4 +1,15 @@
+/*
+==================================================
+DOCUMENTATION
+-------------
+Author          = Sudhanshu Motewar, Sukhada Takle
+Starting Date   = 22/03/21
+Completion Date =
+==================================================
+*/
+
 package hotel.management.system;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -28,7 +39,7 @@ public class HotelManagementSystem extends JFrame {
 
         // Button and its properties (bounds, background color, foreground color, font)
         JButton button = new JButton("CONTINUE");
-        button.setBounds(240,300,150,50);
+        button.setBounds(243,300,150,50);
         button.setBackground(Color.BLACK);
         button.setForeground(Color.WHITE);
         button.setFont(new Font("times new roman", Font.BOLD, 20));
@@ -38,6 +49,7 @@ public class HotelManagementSystem extends JFrame {
         while(true){
             heading.setVisible(false);
 
+            // 1000 = 1 second
             try{ Thread.sleep(300); }
             catch (Exception e){ }
 
