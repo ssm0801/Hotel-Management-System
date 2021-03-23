@@ -61,7 +61,8 @@ public class HotelManagementSystem extends JFrame implements ActionListener{
         }
     }
 
-    public void actionPerformed(ActionEvent act_evt){
+    // action function for continue button
+    public void actionPerformed(ActionEvent action){
         new Login().setVisible(true);
         this.setVisible(false);
     }
