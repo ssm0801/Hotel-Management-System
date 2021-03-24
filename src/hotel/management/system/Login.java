@@ -14,7 +14,7 @@ public class Login extends JFrame implements ActionListener{
 
     public Login(){
         // size and location of bounding box
-        setBounds(500,130,500,600);
+        setBounds(520,130,500,600);
         setLayout(null);
 
         // Inserted image and changed its dimension and gave location in dialog box
