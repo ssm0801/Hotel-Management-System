@@ -70,16 +70,20 @@ public class Login extends JFrame implements ActionListener{
     // action function for login and cancel buttons
     public void actionPerformed(ActionEvent action){
         if (action.getSource() == login_button){
+            // take input's username and password
             String username = un_field.getText();
             String password = psd_field.getText();
             DatabaseConnection connect = new DatabaseConnection();
+            // create SQL query
             String query = "select * from login where username = '"+username+"' and password = '"+password+"'";
             try {
+                // Execute the query
                 ResultSet result = connect.statement.executeQuery(query);
                 if (result.next()){
                     new Dashboard().setVisible(true);
                     setVisible(false);
                 }else {
+                    // pop up message
                     JOptionPane.showMessageDialog(null, "Invalid Login !!!");
                 }
             }catch (Exception e){
