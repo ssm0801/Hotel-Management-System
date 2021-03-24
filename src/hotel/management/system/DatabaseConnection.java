@@ -11,7 +11,9 @@ public class DatabaseConnection {
     public DatabaseConnection(){
         try {
 
+            // jdbc driver
             Class.forName("com.mysql.jdbc.Driver");
+            // connection URL
             connection = DriverManager.getConnection("jdbc:mysql:///hms", "root", "toor");
             statement = connection.createStatement();
 
