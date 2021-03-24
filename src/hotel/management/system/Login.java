@@ -36,12 +36,12 @@ public class Login extends JFrame implements ActionListener{
         add(psd_label);
 
         // Username field and its size and location
-        JTextField un_field = new JTextField();
+        un_field = new JTextField();
         un_field.setBounds(210,300,150,30);
         add(un_field);
 
         // Password field and its size and location
-        JPasswordField psd_field = new JPasswordField();
+        psd_field = new JPasswordField();
         psd_field.setBounds(210,350,150,30);
         add(psd_field);
 
@@ -70,25 +70,24 @@ public class Login extends JFrame implements ActionListener{
     // action function for login and cancel buttons
     public void actionPerformed(ActionEvent action){
         if (action.getSource() == login_button){
+            String username = un_field.getText();
+            String password = psd_field.getText();
+            DatabaseConnection connect = new DatabaseConnection();
+            String query = "select * from login where username = '"+username+"' and password = '"+password+"'";
             try {
-                String username = un_field.getText();
-                String password = psd_field.getText();
-                DatabaseConnection connect = new DatabaseConnection();
-                String query = "select * from login where username = '"+username+"' and password = '"+password+"'";
                 ResultSet result = connect.statement.executeQuery(query);
                 if (result.next()){
                     new Dashboard().setVisible(true);
+                    setVisible(false);
                 }else {
                     JOptionPane.showMessageDialog(null, "Invalid Login !!!");
                 }
-                setVisible(false);
             }catch (Exception e){
                 System.out.println(e);
             }
         }
         // exit the application
         else if (action.getSource() == cancel_button){
-//            System.exit(0);
             setVisible(false);
             new HotelManagementSystem().setVisible(true);
         }

@@ -17,7 +17,7 @@ public class HotelManagementSystem extends JFrame implements ActionListener{
 
     public HotelManagementSystem(){
         // size and location of bounding box
-        setBounds(450,225,640,427);
+        setBounds(450,200,640,427);
         setLayout(null);
 
         // image path and label
