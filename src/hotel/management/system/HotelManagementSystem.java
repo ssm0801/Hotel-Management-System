@@ -15,11 +15,12 @@ import java.awt.event.*;
 
 public class HotelManagementSystem extends JFrame implements ActionListener{
 
+    // all objects declared globally in class to use in methods
     ImageIcon main_image;
     JLabel main_image_lable, heading;
     JButton button;
 
-    HotelManagementSystem(){
+    public HotelManagementSystem(){
         // size and location of bounding box
         setBounds(450,225,640,427);
 
