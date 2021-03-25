@@ -197,7 +197,6 @@ public class AddEmployee extends JFrame implements ActionListener {
         DatabaseConnection connect = new DatabaseConnection();
         // database query
         String query = "INSERT INTO employee values( '"+name+"', '"+age+"', '"+gender+"','"+job+"', '"+salary+"', '"+phone+"','"+aadhar+"', '"+email+"')";
-
         try {
             // Execute the query
             connect.statement.executeUpdate(query);
