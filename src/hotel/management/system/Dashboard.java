@@ -61,7 +61,7 @@ public class Dashboard extends JFrame implements ActionListener{
 
         // title on image
         JLabel title = new JLabel("The SIZZLING welcomes you !!!");
-        title.setBounds(475,100,1500,200);
+        title.setBounds(475,25,1500,200);
         title.setForeground(Color.WHITE);
         title.setFont(new Font("times new roman", Font.BOLD, 70));
         dashboard_image_lable.add(title);
