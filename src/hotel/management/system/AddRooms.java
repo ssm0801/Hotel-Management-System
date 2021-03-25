@@ -8,8 +8,7 @@ public class AddRooms extends JFrame implements ActionListener {
 
     // declared objects globally which are needed outside of constructor
     JTextField room_no_field, price_field;
-    JComboBox availability_combobox, cleaning_status_combobox, bed_type_combobox;
-    String availability, cleaning_status, bed_type;
+    ButtonGroup availability_group, cleaning_status_group, bed_type_group;
 
     AddRooms(){
         // size and location of bounding box
@@ -49,12 +48,28 @@ public class AddRooms extends JFrame implements ActionListener {
         availability_label.setBounds(50,110,100,20);
         add(availability_label);
 
-        // availability combobox and variable
-        availability_combobox = new JComboBox(new String[] {"Available", "Occupied"});
-        availability = (String)availability_combobox.getSelectedItem();
-        availability_combobox.setBackground(Color.WHITE);
-        availability_combobox.setBounds(175,110,200,20);
-        add(availability_combobox);
+        // available button
+        JRadioButton available = new JRadioButton("Available");
+        available.setActionCommand("available");
+        available.setFont(new Font("Tahoma",Font.PLAIN,14));
+        available.setBackground(new Color(32,32,32));
+        available.setForeground(Color.WHITE);
+        available.setBounds(175,110,80,20);
+        add(available);
+
+        // occupied button
+        JRadioButton occupied = new JRadioButton("Occupied");
+        occupied.setActionCommand("occupied");
+        occupied.setFont(new Font("Tahoma",Font.PLAIN,14));
+        occupied.setBackground(new Color(32,32,32));
+        occupied.setForeground(Color.WHITE);
+        occupied.setBounds(275,110,100,20);
+        add(occupied);
+
+        // availability button group
+        availability_group = new ButtonGroup();
+        availability_group.add(available);
+        availability_group.add(occupied);
 
         // cleaning status label
         JLabel cleaning_status_label = new JLabel("Cleaning Status : ");
@@ -63,26 +78,58 @@ public class AddRooms extends JFrame implements ActionListener {
         cleaning_status_label.setBounds(50,150,150,20);
         add(cleaning_status_label);
 
-        // cleaning status combobox and variable
-        cleaning_status_combobox = new JComboBox(new String[] {"Cleaned", "Dirty"});
-        cleaning_status = (String)cleaning_status_combobox.getSelectedItem();
-        cleaning_status_combobox.setBackground(Color.WHITE);
-        cleaning_status_combobox.setBounds(175,150,200,20);
-        add(cleaning_status_combobox);
+        // cleaned button
+        JRadioButton cleaned = new JRadioButton("Cleaned");
+        cleaned.setActionCommand("cleaned");
+        cleaned.setFont(new Font("Tahoma",Font.PLAIN,14));
+        cleaned.setBackground(new Color(32,32,32));
+        cleaned.setForeground(Color.WHITE);
+        cleaned.setBounds(175,150,100,20);
+        add(cleaned);
+
+        // dirty button
+        JRadioButton dirty = new JRadioButton("Dirty");
+        dirty.setActionCommand("occupied");
+        dirty.setFont(new Font("Tahoma",Font.PLAIN,14));
+        dirty.setBackground(new Color(32,32,32));
+        dirty.setForeground(Color.WHITE);
+        dirty.setBounds(275,150,100,20);
+        add(dirty);
+
+        // availability button group
+        cleaning_status_group = new ButtonGroup();
+        cleaning_status_group.add(cleaned);
+        cleaning_status_group.add(dirty);
 
         // bed type label
         JLabel bed_type_label = new JLabel("Bed Type : ");
         bed_type_label.setFont(new Font("Tahoma",Font.PLAIN, 15));
         bed_type_label.setForeground(Color.WHITE);
-        bed_type_label.setBounds(50,190,100,20);
+        bed_type_label.setBounds(50,190,150,20);
         add(bed_type_label);
 
-        // bed type combobox and variable
-        bed_type_combobox = new JComboBox(new String[] {"Single Bed", "Double Bed"});
-        bed_type = (String)bed_type_combobox.getSelectedItem();
-        bed_type_combobox.setBackground(Color.WHITE);
-        bed_type_combobox.setBounds(175,190,200,20);
-        add(bed_type_combobox);
+        // single bed button
+        JRadioButton single_bed = new JRadioButton("Single Bed");
+        single_bed.setActionCommand("single");
+        single_bed.setFont(new Font("Tahoma",Font.PLAIN,14));
+        single_bed.setBackground(new Color(32,32,32));
+        single_bed.setForeground(Color.WHITE);
+        single_bed.setBounds(175,190,100,20);
+        add(single_bed);
+
+        // double bed button
+        JRadioButton double_bed = new JRadioButton("Double Bed");
+        double_bed.setActionCommand("double");
+        double_bed.setFont(new Font("Tahoma",Font.PLAIN,14));
+        double_bed.setBackground(new Color(32,32,32));
+        double_bed.setForeground(Color.WHITE);
+        double_bed.setBounds(275,190,100,20);
+        add(double_bed);
+
+        // availability button group
+        bed_type_group = new ButtonGroup();
+        bed_type_group.add(single_bed);
+        bed_type_group.add(double_bed);
 
         // price label
         JLabel price_label = new JLabel("Price : ");
@@ -114,7 +161,9 @@ public class AddRooms extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         // all info took in separate variable
         String room_no = room_no_field.getText();
-        // availability, cleaning_status, bed_type variable added above
+        String availability = availability_group.getSelection().getActionCommand();
+        String cleaning_status = cleaning_status_group.getSelection().getActionCommand();
+        String bed_type = bed_type_group.getSelection().getActionCommand();
         String price = price_field.getText();
 
         // database connection object
