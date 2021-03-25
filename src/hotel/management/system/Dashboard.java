@@ -14,10 +14,12 @@ public class Dashboard extends JFrame implements ActionListener{
 
         // menu bar of dialog box
         JMenuBar menu_bar = new JMenuBar();
+        menu_bar.setBackground(new Color(23,32,42));
         setJMenuBar(menu_bar);
 
         // first menu
         JMenu menu1 = new JMenu("Hotel Management");
+        menu1.setForeground(new Color(171,235,198));
         menu_bar.add(menu1);
         // item of first menu
         JMenuItem item1 = new JMenuItem("Reception");
@@ -27,6 +29,7 @@ public class Dashboard extends JFrame implements ActionListener{
 
         // second menu
         JMenu menu2 = new JMenu("Admin");
+        menu2.setForeground(new Color(246,221,204));
         menu_bar.add(menu2);
         // items of second menu
         JMenuItem item2 = new JMenuItem("Add Employee");
@@ -55,7 +58,7 @@ public class Dashboard extends JFrame implements ActionListener{
         dashboard_image_lable.add(title);
 
         setVisible(true);
-        getContentPane().setBackground(Color.WHITE);
+        getContentPane().setBackground(new Color(23,32,42));
     }
 
     public void actionPerformed(ActionEvent ae){
