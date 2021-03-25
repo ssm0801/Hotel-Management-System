@@ -75,7 +75,7 @@ public class Login extends JFrame implements ActionListener{
             String password = psd_field.getText();
             DatabaseConnection connect = new DatabaseConnection();
             // create SQL query
-            String query = "select * from login where username = '"+username+"' and password = '"+password+"'";
+            String query = "SELECT * FROM login WHERE username = '"+username+"' AND password = '"+password+"'";
             try {
                 // Execute the query
                 ResultSet result = connect.statement.executeQuery(query);

@@ -2,8 +2,9 @@ package hotel.management.system;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
-public class Dashboard extends JFrame{
+public class Dashboard extends JFrame implements ActionListener{
 
     public Dashboard(){
 
@@ -20,6 +21,8 @@ public class Dashboard extends JFrame{
         menu_bar.add(menu1);
         // item of first menu
         JMenuItem item1 = new JMenuItem("Reception");
+        // reception click event
+        item1.addActionListener(this);
         menu1.add(item1);
 
         // second menu
@@ -28,7 +31,11 @@ public class Dashboard extends JFrame{
         // items of second menu
         JMenuItem item2 = new JMenuItem("Add Employee");
         menu2.add(item2);
+        // add employee click event
+        item2.addActionListener(this);
         JMenuItem item3 = new JMenuItem("Add Room");
+        // add room click event
+        item3.addActionListener(this);
         menu2.add(item3);
 
         // background image of dialog box
@@ -49,6 +56,16 @@ public class Dashboard extends JFrame{
 
         setVisible(true);
         getContentPane().setBackground(Color.WHITE);
+    }
+
+    public void actionPerformed(ActionEvent ae){
+        if (ae.getActionCommand().equals("Reception")){
+
+        }else if (ae.getActionCommand().equals("Add Employee")){
+            new AddEmployee().setVisible(true);
+        }else if (ae.getActionCommand().equals("Add Room")){
+
+        }
     }
 
     public static void main(String[] args) {
