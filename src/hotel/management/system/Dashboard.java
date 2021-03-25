@@ -42,6 +42,14 @@ public class Dashboard extends JFrame implements ActionListener{
         item3.addActionListener(this);
         menu2.add(item3);
 
+        // log out button
+        JButton logout_button = new JButton("Log Out");
+        logout_button.setForeground(Color.BLACK);
+        logout_button.setBackground(new Color(255,0,0));
+        logout_button.addActionListener(this);
+        logout_button.setFont(new Font("verdana", Font.BOLD, 15));
+        menu_bar.add(logout_button);
+
         // background image of dialog box
         ImageIcon dashboard_image = new ImageIcon(ClassLoader.getSystemResource("images/dashboard.jpg"));
         // resize image
@@ -69,6 +77,9 @@ public class Dashboard extends JFrame implements ActionListener{
             new AddEmployee().setVisible(true);
         }else if (ae.getActionCommand().equals("Add Room")){
             new AddRooms().setVisible(true);
+        }else if (ae.getActionCommand().equals("Log Out")){
+            new Login().setVisible(true);
+            this.setVisible(false);
         }
     }
 
