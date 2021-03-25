@@ -27,11 +27,13 @@ public class Login extends JFrame implements ActionListener{
 
         // Username label and its size and location
         JLabel un_label = new JLabel("Username : ");
+        un_label.setForeground(Color.WHITE);
         un_label.setBounds(140,300,100,30);
         add(un_label);
 
         // Password label and its size and location
         JLabel psd_label = new JLabel("Password : ");
+        psd_label.setForeground(Color.WHITE);
         psd_label.setBounds(140,350,100,30);
         add(psd_label);
 
@@ -48,7 +50,7 @@ public class Login extends JFrame implements ActionListener{
         // Login button and its properties, size and location
         login_button = new JButton("Login");
         login_button.setBounds(150,400,90,30);
-        login_button.setBackground(Color.BLACK);
+        login_button.setBackground(new Color(66,34,130));
         login_button.setForeground(Color.WHITE);
         login_button.addActionListener(this);
         add(login_button);
@@ -56,13 +58,13 @@ public class Login extends JFrame implements ActionListener{
         // Cancel button and its properties, size and location
         cancel_button = new JButton("Cancel");
         cancel_button.setBounds(250,400,90,30);
-        cancel_button.setBackground(Color.BLACK);
+        cancel_button.setBackground(new Color(66,34,130));
         cancel_button.setForeground(Color.WHITE);
         cancel_button.addActionListener(this);
         add(cancel_button);
 
         // Change dialog box background color
-        getContentPane().setBackground(Color.WHITE);
+        getContentPane().setBackground(new Color(32,32,32));
 
         setVisible(true);
     }
@@ -84,7 +86,7 @@ public class Login extends JFrame implements ActionListener{
                     setVisible(false);
                 }else {
                     // pop up message
-                    JOptionPane.showMessageDialog(null, "Invalid Login !!!");
+                    JOptionPane.showMessageDialog(null, "Invalid username and password !!!", "WARNING", JOptionPane.WARNING_MESSAGE);
                 }
             }catch (Exception e){
                 System.out.println(e);
