@@ -15,6 +15,7 @@ public class Dashboard extends JFrame implements ActionListener{
         // menu bar of dialog box
         JMenuBar menu_bar = new JMenuBar();
         menu_bar.setBackground(new Color(23,32,42));
+        UIManager.put("Menu.font", new Font("Verdana", Font.BOLD, 15));
         setJMenuBar(menu_bar);
 
         // first menu
