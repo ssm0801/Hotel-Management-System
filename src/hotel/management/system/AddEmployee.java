@@ -22,21 +22,23 @@ public class AddEmployee extends JFrame implements ActionListener {
 
         // heading and its properties
         JLabel heading = new JLabel("ADD EMPLOYEE");
-        heading.setForeground(Color.BLUE);
-        heading.setFont(new Font("times new roman",Font.BOLD, 30));
-        heading.setBounds(260,15,250,25);
+        heading.setForeground(new Color(204,246,221));
+        heading.setFont(new Font("monospaced",Font.BOLD, 40));
+        heading.setBounds(250,10,300,35);
         add(heading);
 
+        // employee image resized and added
         ImageIcon employee_image = new ImageIcon(ClassLoader.getSystemResource("images/employee.jpg"));
         Image img = employee_image.getImage().getScaledInstance(400,300, Image.SCALE_DEFAULT);
         ImageIcon new_employee_image = new ImageIcon(img);
         JLabel employee_image_label = new JLabel(new_employee_image);
-        employee_image_label.setBounds(370,90,400,300);
+        employee_image_label.setBounds(355,100,400,300);
         add(employee_image_label);
 
         // name label
         JLabel name_label = new JLabel("Name : ");
         name_label.setFont(new Font("Tahoma",Font.PLAIN, 15));
+        name_label.setForeground(Color.WHITE);
         name_label.setBounds(50,70,60,20);
         add(name_label);
 
@@ -50,6 +52,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         // age label
         JLabel age_label = new JLabel("Age : ");
         age_label.setFont(new Font("Tahoma",Font.PLAIN, 15));
+        age_label.setForeground(Color.WHITE);
         age_label.setBounds(50,110,60,20);
         add(age_label);
 
@@ -61,6 +64,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         // gender label
         JLabel gender_label = new JLabel("Gender : ");
         gender_label.setFont(new Font("Tahoma",Font.PLAIN, 15));
+        gender_label.setForeground(Color.WHITE);
         gender_label.setBounds(50,150,80,20);
         add(gender_label);
 
@@ -68,21 +72,24 @@ public class AddEmployee extends JFrame implements ActionListener {
         JRadioButton male = new JRadioButton("Male");
         male.setActionCommand("male");
         male.setFont(new Font("Tahoma",Font.PLAIN,14));
-        male.setBackground(Color.WHITE);
+        male.setBackground(new Color(32,32,32));
+        male.setForeground(Color.WHITE);
         male.setBounds(125,150,70,20);
         add(male);
 
         JRadioButton female = new JRadioButton("Female");
         female.setActionCommand("female");
         female.setFont(new Font("Tahoma",Font.PLAIN,14));
-        female.setBackground(Color.WHITE);
+        female.setBackground(new Color(32,32,32));
+        female.setForeground(Color.WHITE);
         female.setBounds(125,180,80,20);
         add(female);
 
         JRadioButton other = new JRadioButton("Other");
         other.setActionCommand("other");
         other.setFont(new Font("Tahoma",Font.PLAIN,14));
-        other.setBackground(Color.WHITE);
+        other.setBackground(new Color(32,32,32));
+        other.setForeground(Color.WHITE);
         other.setBounds(125,210,80,20);
         add(other);
 
@@ -95,6 +102,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         // job label
         JLabel job_label = new JLabel("Job : ");
         job_label.setFont(new Font("Tahoma",Font.PLAIN, 15));
+        job_label.setForeground(Color.WHITE);
         job_label.setBounds(50,250,70,20);
         add(job_label);
 
@@ -110,6 +118,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         // salary label
         JLabel salary_label = new JLabel("Salary : ");
         salary_label.setFont(new Font("Tahoma",Font.PLAIN, 15));
+        salary_label.setForeground(Color.WHITE);
         salary_label.setBounds(50,290,70,20);
         add(salary_label);
 
@@ -121,6 +130,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         // phone label
         JLabel phone_label = new JLabel("Phone : ");
         phone_label.setFont(new Font("Tahoma",Font.PLAIN, 15));
+        phone_label.setForeground(Color.WHITE);
         phone_label.setBounds(50,330,70,20);
         add(phone_label);
 
@@ -134,6 +144,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         // aadhar label
         JLabel aadhar_label = new JLabel("Aadhar : ");
         aadhar_label.setFont(new Font("Tahoma",Font.PLAIN, 15));
+        aadhar_label.setForeground(Color.WHITE);
         aadhar_label.setBounds(50,370,80,20);
         add(aadhar_label);
 
@@ -147,6 +158,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         // email label
         JLabel email_label = new JLabel("Email : ");
         email_label.setFont(new Font("Tahoma",Font.PLAIN, 15));
+        email_label.setForeground(Color.WHITE);
         email_label.setBounds(50,410,70,20);
         add(email_label);
 
@@ -161,10 +173,10 @@ public class AddEmployee extends JFrame implements ActionListener {
         submit.setBackground(new Color(66,34,130));
         submit.setFont(new Font("times new roman", Font.PLAIN, 20));
         submit.addActionListener(this);
-        submit.setBounds(125,452,115,30);
+        submit.setBounds(325,455,115,30);
         add(submit);
 
-        getContentPane().setBackground(Color.WHITE);
+        getContentPane().setBackground(new Color(32,32,32));
 
         setLayout(null);
         setVisible(true);
@@ -175,6 +187,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         String name = name_field.getText();
         String age = age_field.getText();
         String gender = gender_group.getSelection().getActionCommand();
+        // job variable declared above
         String salary = salary_field.getText();
         String phone = phone_field.getText();
         String aadhar = aadhar_field.getText();
