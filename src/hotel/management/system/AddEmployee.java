@@ -16,16 +16,23 @@ public class AddEmployee extends JFrame implements ActionListener {
     AddEmployee(){
 
         // size and location of bounding box
-        setBounds(560,140,400,550);
+        setBounds(375,140,800,550);
         // placeholder object
         PlaceHolder holder;
 
         // heading and its properties
         JLabel heading = new JLabel("ADD EMPLOYEE");
         heading.setForeground(Color.BLUE);
-        heading.setFont(new Font("times new roman",Font.BOLD, 20));
-        heading.setBounds(110,20,200,20);
+        heading.setFont(new Font("times new roman",Font.BOLD, 30));
+        heading.setBounds(260,15,250,25);
         add(heading);
+
+        ImageIcon employee_image = new ImageIcon(ClassLoader.getSystemResource("images/employee.jpg"));
+        Image img = employee_image.getImage().getScaledInstance(400,300, Image.SCALE_DEFAULT);
+        ImageIcon new_employee_image = new ImageIcon(img);
+        JLabel employee_image_label = new JLabel(new_employee_image);
+        employee_image_label.setBounds(370,90,400,300);
+        add(employee_image_label);
 
         // name label
         JLabel name_label = new JLabel("Name : ");
@@ -151,8 +158,8 @@ public class AddEmployee extends JFrame implements ActionListener {
         // submit button
         JButton submit = new JButton("SUBMIT");
         submit.setForeground(Color.WHITE);
-        submit.setBackground(Color.BLACK);
-        submit.setFont(new Font("times new roman", Font.BOLD, 20));
+        submit.setBackground(new Color(66,34,130));
+        submit.setFont(new Font("times new roman", Font.PLAIN, 20));
         submit.addActionListener(this);
         submit.setBounds(125,452,115,30);
         add(submit);
