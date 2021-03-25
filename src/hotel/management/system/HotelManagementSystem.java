@@ -28,15 +28,15 @@ public class HotelManagementSystem extends JFrame implements ActionListener{
 
         // heading and its properties (bounds, foreground color, font)
         JLabel heading = new JLabel("Hotel Management System");
-        heading.setBounds(120,0,400,70);
-        heading.setForeground(Color.BLACK);
-        heading.setFont(new Font("times new roman", Font.ITALIC, 35));
+        heading.setForeground(new Color(0,0,204));
+        heading.setBounds(120,0,420,70);
+        heading.setFont(new Font("times new roman", Font.BOLD, 35));
         main_image_lable.add(heading);
 
         // Button and its properties (bounds, background color, foreground color, font)
         JButton button = new JButton("CONTINUE");
         button.setBounds(243,300,150,50);
-        button.setBackground(Color.BLACK);
+        button.setBackground(new Color(66,34,130));
         button.setForeground(Color.WHITE);
         button.setFont(new Font("times new roman", Font.BOLD, 20));
         button.addActionListener(this);
