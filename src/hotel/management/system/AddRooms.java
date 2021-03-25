@@ -6,6 +6,7 @@ import java.awt.event.*;
 
 public class AddRooms extends JFrame implements ActionListener {
 
+    // declared objects globally which are needed outside of constructor
     JTextField room_no_field, price_field;
     JComboBox availability_combobox, cleaning_status_combobox, bed_type_combobox;
     String availability, cleaning_status, bed_type;
