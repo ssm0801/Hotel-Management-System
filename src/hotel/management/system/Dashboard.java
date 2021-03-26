@@ -41,6 +41,10 @@ public class Dashboard extends JFrame implements ActionListener{
         // add room click event
         item3.addActionListener(this);
         menu2.add(item3);
+        JMenuItem item4 = new JMenuItem("Add Car");
+        // add car click event
+        item4.addActionListener(this);
+        menu2.add(item4);
 
         // log out button
         JButton logout_button = new JButton("Log Out");
@@ -75,9 +79,11 @@ public class Dashboard extends JFrame implements ActionListener{
 
         }else if (ae.getActionCommand().equals("Add Employee")){
             new AddEmployee().setVisible(true);
-        }else if (ae.getActionCommand().equals("Add Room")){
+        }else if (ae.getActionCommand().equals("Add Room")) {
             new AddRooms().setVisible(true);
-        }else if (ae.getActionCommand().equals("Log Out")){
+        }else if (ae.getActionCommand().equals("Add Car")){
+            new AddCar().setVisible(true);
+        } else if (ae.getActionCommand().equals("Log Out")){
             new Login().setVisible(true);
             this.setVisible(false);
         }
