@@ -76,14 +76,19 @@ public class Dashboard extends JFrame implements ActionListener{
 
     public void actionPerformed(ActionEvent ae){
         if (ae.getActionCommand().equals("Reception")){
-
+            // reception dialog box
+            new Reception().setVisible(true);
         }else if (ae.getActionCommand().equals("Add Employee")){
+            // add employee dialog box
             new AddEmployee().setVisible(true);
         }else if (ae.getActionCommand().equals("Add Room")) {
+            // add room dialog box
             new AddRooms().setVisible(true);
         }else if (ae.getActionCommand().equals("Add Car")){
+            // add car dialog box
             new AddCar().setVisible(true);
         } else if (ae.getActionCommand().equals("Log Out")){
+            // logout dashboard
             new Login().setVisible(true);
             this.setVisible(false);
         }
