@@ -29,11 +29,13 @@ public class Login extends JFrame implements ActionListener{
         JLabel un_label = new JLabel("Username : ");
         un_label.setForeground(Color.WHITE);
         un_label.setBounds(140,300,100,30);
+        un_label.setFont(new Font("serif", Font.PLAIN,15));
         add(un_label);
 
         // Password label and its size and location
         JLabel psd_label = new JLabel("Password : ");
         psd_label.setForeground(Color.WHITE);
+        psd_label.setFont(new Font("serif", Font.PLAIN,15));
         psd_label.setBounds(140,350,100,30);
         add(psd_label);
 
@@ -49,17 +51,19 @@ public class Login extends JFrame implements ActionListener{
 
         // Login button and its properties, size and location
         login_button = new JButton("Login");
-        login_button.setBounds(150,400,90,30);
-        login_button.setBackground(new Color(66,34,130));
-        login_button.setForeground(Color.WHITE);
+        login_button.setBounds(145,400,100,30);
+        login_button.setBackground(Color.GREEN);
+        login_button.setForeground(Color.BLACK);
+        login_button.setFont(new Font("serif", Font.BOLD,20));
         login_button.addActionListener(this);
         add(login_button);
 
         // Cancel button and its properties, size and location
         cancel_button = new JButton("Cancel");
-        cancel_button.setBounds(250,400,90,30);
-        cancel_button.setBackground(new Color(66,34,130));
+        cancel_button.setBounds(255,400,100,30);
+        cancel_button.setBackground(Color.RED);
         cancel_button.setForeground(Color.WHITE);
+        cancel_button.setFont(new Font("serif", Font.BOLD,20));
         cancel_button.addActionListener(this);
         add(cancel_button);
 
@@ -70,8 +74,8 @@ public class Login extends JFrame implements ActionListener{
     }
 
     // action function for login and cancel buttons
-    public void actionPerformed(ActionEvent action){
-        if (action.getSource() == login_button){
+    public void actionPerformed(ActionEvent ae){
+        if (ae.getSource() == login_button){
             // take input's username and password
             String username = un_field.getText();
             String password = psd_field.getText();
@@ -93,7 +97,7 @@ public class Login extends JFrame implements ActionListener{
             }
         }
         // exit the application
-        else if (action.getSource() == cancel_button){
+        else if (ae.getSource() == cancel_button){
             setVisible(false);
             new HotelManagementSystem().setVisible(true);
         }

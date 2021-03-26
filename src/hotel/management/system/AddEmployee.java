@@ -170,7 +170,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         // submit button
         JButton submit = new JButton("SUBMIT");
         submit.setForeground(Color.WHITE);
-        submit.setBackground(new Color(66,34,130));
+        submit.setBackground(new Color(66,34,50));
         submit.setFont(new Font("times new roman", Font.PLAIN, 20));
         submit.addActionListener(this);
         submit.setBounds(325,455,115,30);
