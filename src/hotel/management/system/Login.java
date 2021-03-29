@@ -14,21 +14,20 @@ public class Login extends JFrame implements ActionListener{
 
     public Login(){
         // size and location of bounding box
-        setBounds(520,130,500,600);
-        setLayout(null);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
 
         // Inserted image and changed its dimension and gave location in dialog box
         ImageIcon login_image = new ImageIcon(ClassLoader.getSystemResource("images/login.jpeg"));
         Image img = login_image.getImage().getScaledInstance(200,200, Image.SCALE_DEFAULT);
         ImageIcon new_login_image = new ImageIcon(img);
         JLabel login_image_label = new JLabel(new_login_image);
-        login_image_label.setBounds(150,50,200,200);
+        login_image_label.setBounds(670,150,200,200);
         add(login_image_label);
 
         // Username label and its size and location
         JLabel un_label = new JLabel("Username : ");
         un_label.setForeground(Color.WHITE);
-        un_label.setBounds(140,300,100,30);
+        un_label.setBounds(660,400,100,30);
         un_label.setFont(new Font("serif", Font.PLAIN,15));
         add(un_label);
 
@@ -36,22 +35,22 @@ public class Login extends JFrame implements ActionListener{
         JLabel psd_label = new JLabel("Password : ");
         psd_label.setForeground(Color.WHITE);
         psd_label.setFont(new Font("serif", Font.PLAIN,15));
-        psd_label.setBounds(140,350,100,30);
+        psd_label.setBounds(660,450,100,30);
         add(psd_label);
 
         // Username field and its size and location
         un_field = new JTextField();
-        un_field.setBounds(210,300,150,30);
+        un_field.setBounds(735,400,150,30);
         add(un_field);
 
         // Password field and its size and location
         psd_field = new JPasswordField();
-        psd_field.setBounds(210,350,150,30);
+        psd_field.setBounds(735,450,150,30);
         add(psd_field);
 
         // Login button and its properties, size and location
         login_button = new JButton("Login");
-        login_button.setBounds(145,400,100,30);
+        login_button.setBounds(660,525,100,30);
         login_button.setBackground(Color.GREEN);
         login_button.setForeground(Color.BLACK);
         login_button.setFont(new Font("serif", Font.BOLD,20));
@@ -60,7 +59,7 @@ public class Login extends JFrame implements ActionListener{
 
         // Cancel button and its properties, size and location
         cancel_button = new JButton("Cancel");
-        cancel_button.setBounds(255,400,100,30);
+        cancel_button.setBounds(780,525,100,30);
         cancel_button.setBackground(Color.RED);
         cancel_button.setForeground(Color.WHITE);
         cancel_button.setFont(new Font("serif", Font.BOLD,20));
@@ -70,6 +69,7 @@ public class Login extends JFrame implements ActionListener{
         // Change dialog box background color
         getContentPane().setBackground(new Color(32,32,32));
 
+        setLayout(null);
         setVisible(true);
     }
 

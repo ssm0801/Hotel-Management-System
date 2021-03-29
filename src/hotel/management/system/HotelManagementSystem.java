@@ -17,31 +17,36 @@ public class HotelManagementSystem extends JFrame implements ActionListener{
 
     public HotelManagementSystem(){
         // size and location of bounding box
-        setBounds(450,200,640,427);
-        setLayout(null);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
 
         // image path and label
         ImageIcon main_image = new ImageIcon(ClassLoader.getSystemResource("images/hotel.jpg"));
-        JLabel main_image_lable = new JLabel(main_image);
-        main_image_lable.setBounds(0,0,640,427);
+        Image img = main_image.getImage().getScaledInstance(1550,1050, Image.SCALE_DEFAULT);
+        ImageIcon new_main_image = new ImageIcon(img);
+        JLabel main_image_lable = new JLabel(new_main_image);
+        main_image_lable.setBounds(0,0,1550,1050);
         add(main_image_lable);
 
         // heading and its properties (bounds, foreground color, font)
         JLabel heading = new JLabel("Hotel Management System");
         heading.setForeground(new Color(0,0,204));
-        heading.setBounds(120,0,420,70);
-        heading.setFont(new Font("times new roman", Font.BOLD, 35));
+        heading.setBounds(425,30,1000,100);
+        heading.setFont(new Font("times new roman", Font.ITALIC, 70));
         main_image_lable.add(heading);
 
         // Button and its properties (bounds, background color, foreground color, font)
-        JButton button = new JButton("CONTINUE");
-        button.setBounds(243,300,150,50);
+        JButton button = new JButton("Continue");
+        button.setBounds(700,750,150,50);
         button.setBackground(new Color(66,34,130));
         button.setForeground(Color.WHITE);
-        button.setFont(new Font("times new roman", Font.BOLD, 20));
+        button.setFont(new Font("times new roman", Font.PLAIN, 20));
         button.addActionListener(this);
         main_image_lable.add(button);
 
+        // stop program after exit
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        setLayout(null);
         setVisible(true);
     }
 

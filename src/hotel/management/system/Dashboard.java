@@ -8,7 +8,6 @@ public class Dashboard extends JFrame implements ActionListener{
 
     public Dashboard(){
 
-        setLayout(null);
         // maximise the dialog box
         setExtendedState(JFrame.MAXIMIZED_BOTH);
 
@@ -57,21 +56,24 @@ public class Dashboard extends JFrame implements ActionListener{
         // background image of dialog box
         ImageIcon dashboard_image = new ImageIcon(ClassLoader.getSystemResource("images/dashboard.jpg"));
         // resize image
-        Image img = dashboard_image.getImage().getScaledInstance(1540,860, Image.SCALE_DEFAULT);
+        Image img = dashboard_image.getImage().getScaledInstance(1550,820, Image.SCALE_DEFAULT);
         ImageIcon new_dashboard_image = new ImageIcon(img);
         JLabel dashboard_image_lable = new JLabel(new_dashboard_image);
-        dashboard_image_lable.setBounds(0,0,1540,860);
+        dashboard_image_lable.setBounds(0,0,1550,820);
         add(dashboard_image_lable);
 
         // title on image
         JLabel title = new JLabel("The SIZZLING welcomes you !!!");
-        title.setBounds(475,25,1500,200);
-        title.setForeground(Color.WHITE);
+        title.setBounds(300,50,1500,200);
+        title.setForeground(Color.BLACK);
         title.setFont(new Font("times new roman", Font.BOLD, 70));
         dashboard_image_lable.add(title);
 
-        setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         getContentPane().setBackground(new Color(23,32,42));
+
+        setLayout(null);
+        setVisible(true);
     }
 
     public void actionPerformed(ActionEvent ae){
