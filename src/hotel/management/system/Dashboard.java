@@ -69,7 +69,10 @@ public class Dashboard extends JFrame implements ActionListener{
         title.setFont(new Font("times new roman", Font.BOLD, 70));
         dashboard_image_lable.add(title);
 
+        // exit program on closing dialog box
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // dialog box background color
         getContentPane().setBackground(new Color(23,32,42));
 
         setLayout(null);
