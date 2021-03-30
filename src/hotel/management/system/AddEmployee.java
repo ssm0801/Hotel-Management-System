@@ -11,7 +11,7 @@ public class AddEmployee extends JFrame implements ActionListener {
     JTextField name_field, age_field, salary_field, phone_field, aadhar_field, email_field;
     ButtonGroup gender_group;
     JComboBox job_combobox;
-A
+
     AddEmployee(){
 
         // size and location of bounding box
