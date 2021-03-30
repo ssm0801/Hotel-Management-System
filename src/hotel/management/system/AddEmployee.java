@@ -11,8 +11,7 @@ public class AddEmployee extends JFrame implements ActionListener {
     JTextField name_field, age_field, salary_field, phone_field, aadhar_field, email_field;
     ButtonGroup gender_group;
     JComboBox job_combobox;
-    String job;
-
+A
     AddEmployee(){
 
         // size and location of bounding box
@@ -108,9 +107,9 @@ public class AddEmployee extends JFrame implements ActionListener {
 
         // https://www.revfine.com/hotel-positions/
         // job list and combobox
-        String job_list[] = {"Restaurant Manager", "Kitchen staff", "Head Chef", "Room Service", "Hotel Porter", "Front Desk Employee", "Waiter/Waitress", "Driver", "Housekeeping"};
-        job_combobox = new JComboBox(job_list);
-        job = (String)job_combobox.getSelectedItem();
+        String jobs[] = {"Kitchen staff", "Restaurant Manager", "Head Chef", "Room Service", "Hotel Porter", "Front Desk Employee", "Waiter/Waitress", "Driver", "Housekeeping"};
+        job_combobox = new JComboBox(jobs);
+        String job = (String)job_combobox.getSelectedItem();
         job_combobox.setBackground(Color.WHITE);
         job_combobox.setBounds(125,250,200,20);
         add(job_combobox);
@@ -170,7 +169,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         // submit button
         JButton submit = new JButton("SUBMIT");
         submit.setForeground(Color.WHITE);
-        submit.setBackground(new Color(66,34,50));
+        submit.setBackground(new Color(66,34,130));
         submit.setFont(new Font("times new roman", Font.PLAIN, 20));
         submit.addActionListener(this);
         submit.setBounds(325,455,115,30);
@@ -187,7 +186,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         String name = name_field.getText();
         String age = age_field.getText();
         String gender = gender_group.getSelection().getActionCommand();
-        // job variable declared above
+        String job = (String)job_combobox.getSelectedItem();
         String salary = salary_field.getText();
         String phone = phone_field.getText();
         String aadhar = aadhar_field.getText();
