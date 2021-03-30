@@ -190,6 +190,7 @@ public class NewCustomer extends JFrame implements ActionListener {
         back.setBounds(340,410,115,30);
         add(back);
 
+        // dialog box background color
         getContentPane().setBackground(new Color(32,32,32));
 
         setLayout(null);
