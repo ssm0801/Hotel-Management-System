@@ -107,7 +107,7 @@ public class AddEmployee extends JFrame implements ActionListener {
 
         // https://www.revfine.com/hotel-positions/
         // job list and combobox
-        String jobs[] = {"Kitchen staff", "Restaurant Manager", "Head Chef", "Room Service", "Hotel Porter", "Front Desk Employee", "Waiter/Waitress", "Driver", "Housekeeping"};
+        String jobs[] = {"Restaurant Manager", "Kitchen staff", "Head Chef", "Room Service", "Hotel Porter", "Front Desk Employee", "Waiter/Waitress", "Driver", "Housekeeping"};
         job_combobox = new JComboBox(jobs);
         String job = (String)job_combobox.getSelectedItem();
         job_combobox.setBackground(Color.WHITE);
