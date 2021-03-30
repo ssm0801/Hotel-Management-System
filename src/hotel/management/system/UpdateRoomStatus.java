@@ -103,6 +103,7 @@ public class UpdateRoomStatus extends JFrame implements ActionListener {
         back.addActionListener(this);back.setBounds(340,400,115,30);
         add(back);
 
+        // dialog box background color
         getContentPane().setBackground(new Color(32,32,32));
 
         setLayout(null);
@@ -129,6 +130,7 @@ public class UpdateRoomStatus extends JFrame implements ActionListener {
             String clean_status = cleaning_status_field.getText();
             if (room_no == null){
                 String message = "No Room Selected !!!";
+                // pop up message
                 JOptionPane.showMessageDialog(null, message, "WARNING", JOptionPane.WARNING_MESSAGE);
             }
             else{
@@ -138,6 +140,7 @@ public class UpdateRoomStatus extends JFrame implements ActionListener {
                 try {
                     // Execute the query
                     connect.statement.executeUpdate(query);
+                    // pop up message
                     String message = "Changed clean status of room " + room_no + " to "+clean_status+"!!!";
                     // popup message
                     JOptionPane.showMessageDialog(null, message);
