@@ -16,6 +16,7 @@ import java.awt.event.*;
 public class HotelManagementSystem extends JFrame implements ActionListener{
 
     public HotelManagementSystem(){
+
         // size and location of bounding box
         setExtendedState(JFrame.MAXIMIZED_BOTH);
 
