@@ -57,7 +57,10 @@ public class SearchRoom extends JFrame implements ActionListener {
 
         // available checkbox and its properties
         available = new JCheckBox("only available");
-        available.setBounds(550,75,110,20);
+        available.setBackground(new Color(32,32,32));
+        available.setForeground(Color.WHITE);
+        available.setFont(new Font("arial", Font.PLAIN, 15));
+        available.setBounds(550,75,125,20);
         add(available);
 
         // table headings
