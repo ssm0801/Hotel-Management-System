@@ -13,6 +13,7 @@ public class Login extends JFrame implements ActionListener{
     JPasswordField psd_field;
 
     public Login(){
+
         // size and location of bounding box
         setExtendedState(JFrame.MAXIMIZED_BOTH);
 
