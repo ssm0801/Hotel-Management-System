@@ -1,7 +1,6 @@
 package hotel.management.system;
 
 import com.placeholder.PlaceHolder;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
