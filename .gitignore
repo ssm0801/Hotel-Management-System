@@ -3,8 +3,7 @@
 out/
 *.jar
 Jar Files/
-<<<<<<< HEAD
+*.png
+*.jpg
+*.jpeg
 README.md
-=======
-README.md
->>>>>>> b6085746e66dc324746b1eef6fa690a1b0a5eaa7
