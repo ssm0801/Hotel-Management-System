@@ -133,6 +133,10 @@ public class PickupService extends JFrame implements ActionListener {
             try {
                 DatabaseConnection connection = new DatabaseConnection();
                 connection.statement.executeUpdate(query);
+                connection.statement.executeUpdate("DELETE FROM pickup WHERE time = 'hh:mm'");
+                String message = "New Pickup added !!!";
+                JOptionPane.showMessageDialog(null, message);
+                this.setVisible(false);
             } catch (Exception e) {
                 System.out.println(e);
             }
