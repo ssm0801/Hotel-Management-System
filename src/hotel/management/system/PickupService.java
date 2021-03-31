@@ -10,6 +10,7 @@ import java.util.*;
 
 public class PickupService extends JFrame implements ActionListener {
 
+    // declared objects globally which are needed outside of constructor
     JComboBox cars_combobox;
     JTextField address_field, time_field;
     JButton submit, back;
