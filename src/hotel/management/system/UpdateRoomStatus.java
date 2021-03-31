@@ -36,10 +36,10 @@ public class UpdateRoomStatus extends JFrame implements ActionListener {
         add(updateroom_image_label);
 
         // allocated room no. label
-        JLabel room_label = new JLabel("Room No. : ");
+        JLabel room_label = new JLabel("Dirty Room No. : ");
         room_label.setFont(new Font("Tahoma",Font.PLAIN, 15));
         room_label.setForeground(Color.WHITE);
-        room_label.setBounds(30,150,110,20);
+        room_label.setBounds(20,150,150,20);
         add(room_label);
 
         // created array list of string data type
@@ -69,7 +69,7 @@ public class UpdateRoomStatus extends JFrame implements ActionListener {
         JLabel cleaning_status_label = new JLabel("Clean Status : ");
         cleaning_status_label.setFont(new Font("Tahoma",Font.PLAIN, 15));
         cleaning_status_label.setForeground(Color.WHITE);
-        cleaning_status_label.setBounds(30,190,100,20);
+        cleaning_status_label.setBounds(40,190,100,20);
         add(cleaning_status_label);
 
         // cleaning status field
