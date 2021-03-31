@@ -131,7 +131,7 @@ public class CustomerInfo extends JFrame implements ActionListener {
             DatabaseConnection connection = new DatabaseConnection();
             if (foreigner.isSelected()){
                 // query when only foreigner is selected
-                String query = "select * from customer where country != 'india'";
+                String query = "SELECT * FROM customer WHERE country != 'india'";
                 try {
                     ResultSet result = connection.statement.executeQuery(query);
                     table.setModel(DbUtils.resultSetToTableModel(result));
@@ -141,7 +141,7 @@ public class CustomerInfo extends JFrame implements ActionListener {
             }
             else {
                 // query when only available is not selected
-                String query = "select * from customer";
+                String query = "SELECT * FROM customer";
                 try {
                     ResultSet result = connection.statement.executeQuery(query);
                     table.setModel(DbUtils.resultSetToTableModel(result));

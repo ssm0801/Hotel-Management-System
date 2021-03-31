@@ -142,7 +142,6 @@ public class SearchRoom extends JFrame implements ActionListener {
                 } catch (Exception e) {
                     System.out.println(e);
                 }
-
             }
             else {
                 // query when only available is not selected
@@ -154,7 +153,6 @@ public class SearchRoom extends JFrame implements ActionListener {
                     System.out.println(e);
                 }
             }
-
         }else if (ae.getSource() == back){
             this.setVisible(false);
             new Reception().setVisible(true);

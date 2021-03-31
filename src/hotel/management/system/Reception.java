@@ -7,12 +7,13 @@ import java.awt.event.*;
 public class Reception extends JFrame implements ActionListener {
 
     // declared objects globally which are needed outside of constructor
-    JButton new_customer, all_employee, customer_info, check_out, update_room_status, pickup_service, search, search_room;
+    JButton new_customer, all_employee, customer_info, check_out, update_room_status, pickup_service, search, search_room, pickup_info;
 
     Reception(){
         // size and location of bounding box
-        setBounds(360,200,800,460);
+        setBounds(370,175,800,520);
 
+        // colors that used for button background
         Color red = new Color(255,158,158);
         Color orange = new Color(255,205,158);
         Color yellow = new Color(255,255,158);
@@ -31,7 +32,7 @@ public class Reception extends JFrame implements ActionListener {
         // reception image resized and added
         ImageIcon employee_image = new ImageIcon(ClassLoader.getSystemResource("images/reception.jpg"));
         JLabel employee_image_label = new JLabel(employee_image);
-        employee_image_label.setBounds(305,92,425,285);
+        employee_image_label.setBounds(305,110,425,285);
         add(employee_image_label);
 
         // new customer button
@@ -97,6 +98,16 @@ public class Reception extends JFrame implements ActionListener {
         update_room_status.setBounds(30,370,225,30);
         add(update_room_status);
 
+        // pickup info button
+        pickup_info = new JButton("Pickup Info");
+        pickup_info.setBackground(red);
+        pickup_info.setForeground(Color.BLACK);
+        pickup_info.setFont(new Font("serif", Font.BOLD, 20));
+        pickup_info.addActionListener(this);
+        pickup_info.setBounds(30,420,225,30);
+        add(pickup_info);
+
+        // dialog box background
         getContentPane().setBackground(new Color(32,32,32));
 
         setLayout(null);
@@ -105,7 +116,6 @@ public class Reception extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent ae) {
         if (ae.getSource() == new_customer){
-            // DONE
             // add new customer
             new NewCustomer().setVisible(true);
             this.setVisible(false);
@@ -118,15 +128,24 @@ public class Reception extends JFrame implements ActionListener {
             new EmployeeInfo().setVisible(true);
             this.setVisible(false);
         }else if (ae.getSource() == customer_info){
-
+            // customer info dialog box
+            new CustomerInfo().setVisible(true);
+            this.setVisible(false);
         }else if (ae.getSource() == check_out){
-
+            // check out program
+            new CheckOut().setVisible(true);
+            this.setVisible(false);
         }else if (ae.getSource() == pickup_service){
-
+            // pickup service
+            new PickupService().setVisible(true);
+            this.setVisible(false);
         }else if (ae.getSource() == update_room_status){
-            // DONE
             // update room status
             new UpdateRoomStatus().setVisible(true);
+            this.setVisible(false);
+        }else if (ae.getSource() == pickup_info){
+            // pickup info
+            new PickupInfo().setVisible(true);
             this.setVisible(false);
         }
     }

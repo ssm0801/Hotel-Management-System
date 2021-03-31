@@ -17,7 +17,7 @@ public class CheckOut extends JFrame implements ActionListener {
         setBounds(520,250,500,300);
 
         // heading label
-        JLabel heading = new JLabel("Check Out");
+        JLabel heading = new JLabel("CHECK OUT");
         heading.setForeground(new Color(204,246,221));
         heading.setFont(new Font("monospaced",Font.BOLD, 40));
         heading.setBounds(125,5,500,50);
