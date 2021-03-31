@@ -77,6 +77,7 @@ public class CheckOut extends JFrame implements ActionListener {
         back.addActionListener(this);back.setBounds(70,175,115,30);
         add(back);
 
+        // dialog box background color
         getContentPane().setBackground(new Color(32,32,32));
 
         setLayout(null);
@@ -89,8 +90,7 @@ public class CheckOut extends JFrame implements ActionListener {
             if (room_no == null){
                 String message = "No Room Selected !!!";
                 JOptionPane.showMessageDialog(null, message, "WARNING", JOptionPane.WARNING_MESSAGE);
-            }
-            else{
+            } else{
                 DatabaseConnection connect = new DatabaseConnection();
                 // database query
                 // Update availability status in room table
