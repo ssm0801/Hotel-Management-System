@@ -30,10 +30,10 @@ public class CheckOut extends JFrame implements ActionListener {
         add(checkout_image_label);
 
         // allocated room no. label
-        JLabel room_label = new JLabel("Room No. : ");
+        JLabel room_label = new JLabel("Occupied Room No. : ");
         room_label.setFont(new Font("Tahoma",Font.PLAIN, 15));
         room_label.setForeground(Color.WHITE);
-        room_label.setBounds(40,75,110,20);
+        room_label.setBounds(20,75,150,20);
         add(room_label);
 
         // created array list of string data type
@@ -57,7 +57,7 @@ public class CheckOut extends JFrame implements ActionListener {
         rooms_combobox = new JComboBox(available_rooms);
         String room_no = (String)rooms_combobox.getSelectedItem();
         rooms_combobox.setBackground(Color.WHITE);
-        rooms_combobox.setBounds(130,75,100,20);
+        rooms_combobox.setBounds(170,75,100,20);
         add(rooms_combobox);
 
         // submit button
