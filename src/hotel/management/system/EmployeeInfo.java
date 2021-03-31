@@ -95,8 +95,9 @@ public class EmployeeInfo extends JFrame implements ActionListener {
         back_button = new JButton("BACK");
         back_button.setForeground(Color.WHITE);
         back_button.setBackground(new Color(66,34,130));
+        back_button.setFont(new Font("times new roman", Font.PLAIN, 20));
         back_button.addActionListener(this);
-        back_button.setBounds(560,600,80,30);
+        back_button.setBounds(550,600,100,30);
         add(back_button);
 
         // fetching employee information from database
