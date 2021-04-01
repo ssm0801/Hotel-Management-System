@@ -57,14 +57,15 @@ public class PickupInfo extends JFrame implements ActionListener {
         table.setBounds(0,160,1250,400);
         add(table);
 
-        // check button
-        check_button = new JButton("CHECK");
-        check_button.setForeground(Color.WHITE);
-        check_button.setBackground(new Color(66,34,130));
-        check_button.setFont(new Font("times new roman", Font.PLAIN, 20));
-        check_button.addActionListener(this);
-        check_button.setBounds(475,600,115,30);
-        add(check_button);
+        DatabaseConnection connection = new DatabaseConnection();
+        // query for pickup table
+        String query = "SELECT * FROM pickup";
+        try {
+            ResultSet result = connection.statement.executeQuery(query);
+            table.setModel(DbUtils.resultSetToTableModel(result));
+        } catch (Exception e) {
+            System.out.println(e);
+        }
 
         // back button
         back_button = new JButton("BACK");
@@ -83,21 +84,9 @@ public class PickupInfo extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent ae) {
-        if (ae.getSource() == check_button) {
-            DatabaseConnection connection = new DatabaseConnection();
-            // query for pickup table
-            String query = "SELECT * FROM pickup";
-            try {
-                ResultSet result = connection.statement.executeQuery(query);
-                table.setModel(DbUtils.resultSetToTableModel(result));
-            } catch (Exception e) {
-                System.out.println(e);
-            }
-        } else if (ae.getSource() == back_button) {
-            // get back to reception on clicking back button
-            new Reception().setVisible(true);
-            this.setVisible(false);
-        }
+        // get back to reception on clicking back button
+        new Reception().setVisible(true);
+        this.setVisible(false);
     }
 
     public static void main(String[] args) {
