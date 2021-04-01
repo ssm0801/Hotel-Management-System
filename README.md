@@ -49,7 +49,7 @@ Hotel Management System (HMS) developed for managing hotels or guest house writt
 ## Developed by
 
 <p>
-    <a href="https://www.linkedin.com/in/sukhada-takle-307b2919a//">Sukhada Takle</a>
+    <a href="https://www.linkedin.com/in/sukhada-takle-307b2919a/">Sukhada Takle</a>
     <br>
     <a href="https://www.linkedin.com/in/sudhanshu-motewar/">Sudhanshu Motewar</a>
 </p>
