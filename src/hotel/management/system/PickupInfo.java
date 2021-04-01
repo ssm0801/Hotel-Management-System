@@ -15,13 +15,13 @@ public class PickupInfo extends JFrame implements ActionListener {
     PickupInfo(){
 
         // size and location of bounding box
-        setBounds(160,85,1250,700);
+        setBounds(425,85,700,700);
 
         // heading and its properties
         JLabel heading = new JLabel("PICKUP INFO");
         heading.setForeground(new Color(204,246,221));
         heading.setFont(new Font("monospaced",Font.BOLD, 40));
-        heading.setBounds(450,15,350,35);
+        heading.setBounds(215,15,350,35);
         add(heading);
 
         // all labels declared which are used below
@@ -31,21 +31,21 @@ public class PickupInfo extends JFrame implements ActionListener {
         car = new JLabel("CAR");
         car.setFont(new Font("Tahoma",Font.BOLD, 15));
         car.setForeground(Color.WHITE);
-        car.setBounds(175,115,70,30);
+        car.setBounds(90,115,70,30);
         add(car);
 
         // address
         address = new JLabel("ADDRESS");
         address.setFont(new Font("Tahoma",Font.BOLD, 15));
         address.setForeground(Color.WHITE);
-        address.setBounds(550,115,100,30);
+        address.setBounds(300,115,100,30);
         add(address);
 
         // time
         time = new JLabel("TIME");
         time.setFont(new Font("Tahoma",Font.BOLD, 15));
         time.setForeground(Color.WHITE);
-        time.setBounds(1000,115,70,30);
+        time.setBounds(550,115,70,30);
         add(time);
 
         // table and its properties
@@ -54,7 +54,7 @@ public class PickupInfo extends JFrame implements ActionListener {
         table.setForeground(Color.WHITE);
         table.setFont(new Font("arial", Font.PLAIN, 15));
         table.setRowHeight(20);
-        table.setBounds(0,160,1250,400);
+        table.setBounds(0,160,700,400);
         add(table);
 
         DatabaseConnection connection = new DatabaseConnection();
@@ -73,7 +73,7 @@ public class PickupInfo extends JFrame implements ActionListener {
         back_button.setBackground(new Color(66,34,130));
         back_button.setFont(new Font("times new roman", Font.PLAIN, 20));
         back_button.addActionListener(this);
-        back_button.setBounds(625,600,100,30);
+        back_button.setBounds(300,600,100,30);
         add(back_button);
 
         // dialog box background color
