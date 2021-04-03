@@ -1,5 +1,5 @@
 # Hotel-Management-System
-Hotel Management System (HMS) developed for managing hotels or guest house written using swing java and utilizes data from/to the SQL database.
+Hotel Management System (HMS) developed for managing hotels or guest house written using swing java and utilizes data from/to the MySQL database.
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) 
 
